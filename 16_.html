@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 16 </title>
+    <link rel="stylesheet" href="template.css">
+  
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span >Roll No : </span><span class=>12208010</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+            <p>String Array : <span id="str"></span></p>
+            <p>Reverse string word : <span id="word"></span></p>
+        </div>
+
+       
+    </div>
+    <!-- Contain End -->
+
+    <script>
+        var string = [];
+        var size = 3;
+        var ans = ""
+
+        for (var a = 0; a <= size; a++) {
+            string[a] = prompt('Enter array Element ' + (a + 1));
+        }
+        for (var i = string.length; i >= 0; i--) {
+            ans += string[i] + " ";
+        }
+
+        document.querySelector("#str").innerHTML = string;
+        document.querySelector("#word").innerHTML = ans;
+
+    </script>
+
+
+</body>
+
+</html>

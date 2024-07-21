@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 13</title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+        /* #result {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Roll No : </span><span class='details'>12208019</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+      
+    Enter Number1 :<input type="text" id="str0"/><br>
+	Enter Number2 : <input type="text" id="str1"/><br>
+    Enter Number3 :<input type="text" id="str2"/><br>
+	Enter Number4 : <input type="text" id="str3"/><br>
+	Enter Number5 : <input type="text" id="str4"/><br>
+	Enter Number6 : <input type="text" id="str5"/><br>
+ <button onclick="getNumbers()"> Coping </button><br>
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+            <p>Original Array : <span id="org"></span></p>
+            <p>Coping Array : <span id="cpy"></span></p>
+        </div>
+
+    <!-- Contain End -->
+
+    <script>
+        function getNumbers() {
+            var input=[];
+	 
+	  var pattern =/^[-0-9]+$/;
+	       for (var i=0; i<6;i++){
+           
+	       input[i] = parseInt(document.getElementById("str"+i).value);
+          if(pattern.test(input[i])==false){
+               alert("Valid Number");
+		      return ;
+		   }
+		   }
+            const clone = [];
+            for (let i = 0; i < input.length; i++) {
+                clone.push(input[i])
+            }
+            document.querySelector('#org').innerHTML = input;
+            document.querySelector('#cpy').innerHTML = clone;
+        }
+    </script>
+</body>
+
+</html>

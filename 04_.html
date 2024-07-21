@@ -1,0 +1,34 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Practical 4</title>
+      <link rel="stylesheet" href="template.css">
+   </head>
+   <body>
+        <!-- Heading Start  -->
+    <div class="header">
+      <h1>Welcome to our JavaScript Assignment</h1>
+      <span >Roll No : </span><span>1220810</span>
+  </div>
+  <!-- Heading End  -->
+  <div class="container">
+   Enter Number1 :<input type="text" id="str0"/><br>
+   Enter Number2 : <input type="text" id="str1"/><br>
+   Enter Number3: <input type="text" id="str2"/><br>
+   <button onclick="Rev()">Reverse Me</button>
+   <p id="demo"></p>
+   </div>
+   <script>
+      function Rev(){
+	  var input=[];
+	      for (var i=0; i<3;i++){
+	       input[i] = document.getElementById("str"+i).value;
+	       }
+		  var Output=input.sort();
+            document.getElementById("demo").innerHTML=Output;
+	  } 
+   </script>
+   </body>
+</html>

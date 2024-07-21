@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 9 </title>
+    <link rel="stylesheet" href="template.css">
+   
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Roll No : </span><span >12208010</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+      
+        <!-- Outputpart  -->
+        <div id="result">
+            <p id="demo"></p>
+            <p id="demo2"></p>
+        </div>
+  <!-- Codepart -->
+  <div class="full_code">
+    <button type="submit" onclick="myFunction()">Reverse the values</button>
+       </div>
+
+    
+    <!-- Contain End -->
+
+    <script>
+        const friends = new Array(3);
+        for (let j = 0; j < 3; j++) {
+            friends[j] = prompt("Enter name: ");
+        }
+        document.getElementById("demo").innerHTML = friends;
+
+        function myFunction() {
+            const rev = new Array(3);
+            document.getElementById("demo2").innerHTML = friends.reverse();
+            for (let i = 0; i <= friends.length; i++) {
+                rev[i] = friends[i].split("").reverse().join("");
+                document.getElementById("demo2").innerHTML = rev;
+            }
+        }
+    </script>
+</body>
+
+</html>

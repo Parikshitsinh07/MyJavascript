@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 19 </title>
+    <link rel="stylesheet" href="template.css">
+    
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span>Roll No : </span><span >12208010</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+            <form id="number-form">
+                <label for="number-input">Enter a number:</label>
+                <input type="text" id="number-input" name="number-input" required>
+                <button type="submit" onclick="CheakNumber()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Contain End -->
+
+    <script>
+        function CheakNumber() {
+            const form = document.getElementById('number-form');
+            const numberInput = document.getElementById('number-input');
+
+            const userInput = Number(numberInput.value);
+
+            if (isNaN(userInput)) {
+                alert("Error: Please enter a valid number.");
+            } else {
+                alert("You entered: " + userInput);
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

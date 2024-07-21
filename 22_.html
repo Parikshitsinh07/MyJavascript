@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 21 </title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Roll No : </span><span class='details'>12208010</span>
+    </div>
+    <!-- Heading End  -->
+      <!-- Contain Start -->
+      <div class="container">
+	<h1>Student Form</h1>
+	<form id="student-form" onsubmit="return validateForm()">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<br>
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone" required>
+		<br>
+		<label for="course">Course:</label>
+		<select id="course" name="course" required>
+			<option value="">Select a course</option>
+			<option value="math">Math</option>
+			<option value="english">English</option>
+			<option value="science">Science</option>
+		</select>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+	<div id="student-details"></div>
+    </div>
+    <script>
+        function validateForm() {
+	let name = document.forms["student-form"]["name"].value;
+	let email = document.forms["student-form"]["email"].value;
+	let phone = document.forms["student-form"]["phone"].value;
+	let course = document.forms["student-form"]["course"].value;
+
+	if (name == "" || email == "" || phone == "" || course == "") {
+		alert("All fields must be filled out");
+		return false;
+	}
+
+	if (!validateEmail(email)) {
+		alert("Invalid email format");
+		return false;
+	}
+
+	if (!validatePhone(phone)) {
+		alert("Invalid phone number format");
+		return false;
+	}
+
+	return true;
+}
+
+function validateEmail(email) {
+	let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return pattern.test(email);
+}
+
+function validatePhone(phone) {
+	let pattern = /^\d{10}$/;
+	return pattern.test(phone);
+}
+
+document.getElementById("student-form").addEventListener("submit", function(event) {
+	event.preventDefault();
+	let name = document.forms["student-form"]["name"].value;
+	let email = document.forms["student-form"]["email"].value;
+	let phone = document.forms["student-form"]["phone"].value;
+	let course = document.forms["student-form"]["course"].value;
+
+	document.getElementById("student-details").innerHTML = `
+		<h2>Student Details</h2>
+		<p><strong>Name:</strong> ${name}</p>
+		<p><strong>Email:</strong> ${email}</p>
+		<p><strong>Phone:</strong> ${phone}</p>
+		<p><strong>Course:</strong> ${course}</p>
+	`;
+	document.getElementById("student-form").reset();
+});
+
+
+    </script>
+</body>
+</html>

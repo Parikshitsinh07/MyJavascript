@@ -1,0 +1,35 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Practical 5</title>
+      <link rel="stylesheet" href="template.css">
+   </head>
+   <body>
+        <!-- Heading Start  -->
+    <div class="header">
+      <h1>Welcome to our JavaScript Assignment</h1>
+      <span >Roll No : </span><span>1220810</span>
+  </div>
+  <!-- Heading End  -->
+  <div class="container">
+   <input type="text" id="str"/>
+   <button onclick="Rev()">Num of Vowels</button>
+   <p id="demo"></p>
+   </div>
+   <script>
+      function Rev(){
+	      var input = document.getElementById("str").value;
+		  alert(input);
+		  var pattern=/[AEOUIaeoui]/gi;
+		  var result = input.match(pattern);
+		   alert(result);
+		  var Output=result.length;
+		   alert(Output);
+		 
+	      document.getElementById("demo").innerHTML=Output;
+	  } 
+   </script>
+   </body>
+</html>

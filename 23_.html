@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 21 </title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Roll No : </span><span class='details'>12208010</span>
+    </div>
+    <!-- Heading End  -->
+      <!-- Contain Start -->
+      <div class="container">
+       Name:<input type="text"  id="name"><br>
+       Age:<input type="number" id="age"><br>
+       Grede: <input type="text" name="" id="grede"><br>
+       Gender: <input type="text" name="" id="gender"><br>
+       <button onclick="add()">Add Student</button> <br>
+       find Student: <input type="text" name="" id="finds"><br>
+       <button onclick="find()">Find Student</button> <br>
+       <button onclick="List()"> Student List</button> <br>
+
+       <div id="studentList"></div>
+      <p id="laststudent"></p>
+      <p id="laststudent1"></p>
+      <p id="findstudent"></p>
+      <p id="findstudent1"></p>
+      <p id="findstudentn"></p>
+  </div>
+  </biv>
+
+    <script>
+  
+        class Student {
+  constructor(name, age, grade, gender) {
+    this.name = name;
+    this.age = age;
+    this.grade = grade;
+    this.gender = gender;
+  }
+}
+
+const studentList = [
+  new Student("John Doe", 18, "A", "M"),
+
+];
+function List(){
+// get the div element to display the students
+const studentListDiv = document.getElementById("studentList");
+
+// loop through the list of students and create a new p element for each student
+studentList.forEach(student => {
+  const newStudentP = document.createElement("p");
+  newStudentP.textContent = `${student.name}, age ${student.age}, grade ${student.grade}, gender ${student.gender}`;
+  studentListDiv.appendChild(newStudentP);
+});
+}
+function  add(){
+var Sname=document.querySelector('#name').value;
+var Sage=document.querySelector('#age').value;
+var Sgrade=document.querySelector('#grede').value;
+var Sgender=document.querySelector('#gender').value;
+// Add a new student
+studentList.push(new Student(Sname,Sage,Sgrade ,Sgender));
+
+// Print out the details of all students
+// console.log("List of students:");
+// studentList.forEach(student => {
+//   console.log(`${student.name}, age ${student.age}, grade ${student.grade}, gender ${student.gender}`);
+// });
+document.querySelector('#laststudent').innerHTML="Last Add of students:";
+
+studentList.forEach(student => {
+    document.querySelector('#laststudent1').innerHTML=`${student.name}, age ${student.age}, grade ${student.grade}, gender ${student.gender}`;
+});
+}
+function find(){
+// Find a student by name
+var finds=document.querySelector('#finds').value;
+const Pappu = studentList.find(student => student.name === finds);
+document.querySelector('#findstudent').innerHTML="Find of students:";
+if (Pappu) {
+    document.querySelector('#findstudent1').innerHTML=`Student ${Pappu.name} found! Age: ${Pappu.age}, Grade: ${Pappu.grade}, Gender: ${Pappu.gender}`;
+} else {
+    document.querySelector('#findstudent1').innerHTML=`Student not found!`;
+}
+}
+
+// Create separate lists of male and female students
+const isMale = student => student.gender === 'M';
+const isFemale = student => student.gender === 'F';
+const maleStudents = studentList.filter(isMale);
+const femaleStudents = studentList.filter(isFemale);
+
+console.log("List of male students:");
+maleStudents.forEach(student => {
+  console.log(`${student.name}, age ${student.age}, grade ${student.grade}, gender ${student.gender}`);
+});
+
+console.log("List of female students:");
+femaleStudents.forEach(student => {
+  console.log(`${student.name}, age ${student.age}, grade ${student.grade}, gender ${student.gender}`);
+});
+
+    </script>
+</body>
+</html>

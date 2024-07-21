@@ -1,0 +1,45 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Practical 8</title>
+      <link rel="stylesheet" href="template.css">
+      <style>
+         #demo{
+               color: red;
+               font-size: 50px;
+               background-color: lightslategray;
+         }
+      </style>
+   </head>
+   <body>
+        <!-- Heading Start  -->
+    <div class="header">
+      <h1>Welcome to our JavaScript Assignment</h1>
+      <span >Roll No : </span><span>1220810</span>
+  </div>
+  <!-- Heading End  -->
+  <div class="container">
+   First String:<input type="text" id="str0"/><br>
+   Second String:<input type="text" id="str1"/><br>
+   <button onclick="Rev()">Concat</button>
+   <!-- <a name="contents_anchor">Table of Contents</a> -->
+   <p id="demo"></p>
+   </div>
+   <script>
+      function Rev(){
+	  var input=[];
+	      for (var i=0; i<2;i++){
+	       input[i] = document.getElementById("str"+i).value;
+	       }
+		  var Output=input[0]+input[1];
+		  
+		  
+		  
+            document.getElementById("demo").innerHTML= Output;
+			
+	  } 
+   </script>
+   </body>
+</html>

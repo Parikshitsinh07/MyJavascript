@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 17 </title>
+    <link rel="stylesheet" href="template.css">
+
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Roll No : </span><span class='details'>12208010</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+            <p>Object : <span id="obj"></span></p>
+            <p>Name : <span id="name"></span></p>
+            <p>Cost : <span id="cost"></span></p>
+            <p>Cost : <span id="hobbie"></span></p>
+            <p>Greet : <span id="greet"></span></p>
+        </div>
+
+      
+    </div>
+    <!-- Contain End -->
+
+    <script>
+        const bike = {
+            name: 'R15',
+            cost: 175000,
+            hobbies: ['reading', 'games', 'coding'],
+            greet: function () {
+                console.log('I have R15');
+            }
+        };
+
+        console.log(typeof person); // object
+        document.querySelector("#obj").innerHTML = typeof bike;
+
+        // accessing the object value
+        document.querySelector("#name").innerHTML = bike.name;
+        document.querySelector("#cost").innerHTML = bike.cost;
+        document.querySelector("#hobbie").innerHTML = bike.hobbies;
+        document.querySelector("#hobbie").innerHTML = bike.hobbies;
+        document.querySelector("#greet").innerHTML = bike.greet();
+
+    </script>
+
+</body>
+
+</html>

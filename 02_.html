@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 2</title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span >Roll No : </span><span>1220810</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+            <form action="">
+                <label for="fnum">Enter any Number</label>
+                <input type="number" name="fnum" id="fnum"><br><br>
+                <button onclick="meter()" type="button">Meter</button>
+                <button onclick="centimeter()" type="button">CentiMeter</button>
+            </form>
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+            <p>Meter : <span id="meter"></span></p>
+            <p>Centimeter : <span id="centimeter"></span></p>
+        </div>
+
+       
+
+    <script>
+        function meter() {
+            var x = document.getElementById('fnum').value;
+            var a = x * 1000;
+            document.getElementById('meter').innerHTML = a;
+            // var b = document.getElementById('meter').innerHTML;
+            // document.write(x + "meter value is " + b);
+        }
+        function centimeter() {
+            var x = document.getElementById('fnum').value;
+            var a = x * 100000;
+            document.getElementById('centimeter').innerHTML = a;
+        }
+
+    </script>
+
+</body>
+
+</html>

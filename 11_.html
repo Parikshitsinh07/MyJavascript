@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 11 </title>
+    <link rel="stylesheet" href="template.css">
+   
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span >Roll No : </span><span >12208010</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+            <label for="numbersInput">Enter Number : </label>
+            <input type="number" id="numbersInput"><br>
+            <label for="SecondInput">Enter Number : </label>
+            <input type="number" id="SecondInput"><br>
+
+            <button onclick="getNumbers()">Div</button>
+        </div>
+        <!-- Outputpart  -->
+        <div id="result">
+            <p>Result is num : <span id="int"></span></p>
+        </div>
+
+      
+    </div>
+
+    <!-- Contain End -->
+
+    <script>
+        function getNumbers() {
+
+            const inputElement = document.getElementById("numbersInput").value;
+            const SecondElement = document.getElementById("SecondInput").value;
+            const resultElement =  inputElement/SecondElement ;
+         
+            const num = Number(resultElement);
+
+            if (Number.isInteger(num)) {
+                document.getElementById("int").textContent = `${num} is an integer`;
+            } else {
+                document.getElementById("int").textContent = `${num} is not an integer`;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

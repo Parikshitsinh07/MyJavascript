@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 15</title>
+    <link rel="stylesheet" href="template.css">
+   
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span >Roll No : </span><span >12208010</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+            <label for="numbersInput">Enter Number : </label>
+            <input type="text" id="numbersInput">
+            <button onclick="getNumbers()">Submit</button>
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+            <p>Array With Elements : <span id="elements"></span></p>
+            <p>Sum Of Array Elements : <span id="sum"></span></p>
+        </div>
+
+
+    </div>
+    <!-- Contain End -->
+
+    <script>
+        function getNumbers() {
+            const inputElement = document.getElementById("numbersInput").value;
+            const numbers = inputElement.split(",");
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                sum += parseInt(numbers[i]);
+            }
+            document.querySelector("#elements").innerHTML = numbers;
+            document.querySelector("#sum").innerHTML = sum;
+        }
+    </script>
+</body>
+
+</html>
