@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical </title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+        #result {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Reference By :</span><span class='details'>Meera Mam</span> <br>
+        <span class='name'>Roll No : </span><span class='details'>12208019</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+
+            <button type="submit" onclick="myFunction()">Reverse the values</button>
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+            <p id="demo"></p>
+            <p id="demo2"></p>
+        </div>
+
+        <!-- footerpart -->
+        <div class="footer">
+            <a href='08_.html'><span>&#9194;</span></a>
+            <a href='All_Javascipt.html'><span>&#127968;</span></a>
+            <a href='10_.html'><span>&#9193;</span></a>
+        </div>
+    </div>
+    <!-- Contain End -->
+
+    <script>
+        const friends = new Array(3);
+        for (let j = 0; j < 3; j++) {
+            friends[j] = prompt("Enter name: ");
+        }
+        document.getElementById("demo").innerHTML = friends;
+
+        function myFunction() {
+            const rev = new Array(3);
+            document.getElementById("demo2").innerHTML = friends.reverse();
+            for (let i = 0; i <= friends.length; i++) {
+                rev[i] = friends[i].split("").reverse().join("");
+                document.getElementById("demo2").innerHTML = rev;
+            }
+        }
+    </script>
+</body>
+
+</html>

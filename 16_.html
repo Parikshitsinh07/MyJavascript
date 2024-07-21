@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+        #result {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Refrence By :</span><span class='details'>Meera Mam</span> <br>
+        <span class='name'>Roll No : </span><span class='details'>12208019</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+            <p>String Array : <span id="str"></span></p>
+            <p>Reverse string word : <span id="word"></span></p>
+        </div>
+
+        <!-- footerpart -->
+        <div class="footer">
+            <a href='15_.html'><span>&#9194;</span></a>
+            <a href='All_Javascipt.html'><span>&#127968;</span></a>
+            <a href='17_.html'><span>&#9193;</span></a>
+        </div>
+    </div>
+    <!-- Contain End -->
+
+    <script>
+        var string = [];
+        var size = 2;
+        var ans = ""
+
+        for (var a = 0; a < size; a++) {
+            string[a] = prompt('Enter array Element ' + (a + 1));
+        }
+        for (var i = string.length; i >= 0; i--) {
+            ans += string[i] + " ";
+        }
+
+        document.querySelector("#str").innerHTML = string;
+        document.querySelector("#word").innerHTML = ans;
+
+    </script>
+
+
+</body>
+
+</html>

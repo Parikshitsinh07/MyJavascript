@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            var maxLength = 17;
+            $('textarea').keyup(function () {
+                var length = $(this).val().length;
+                var length = maxLength - length;
+                $('#chars').text(length);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <label for="text">Enter Characters</label>
+    <textarea name="text" id="text" rows="4" cols="50" maxlength="17"></textarea>
+    <p>Characters left: <span id="chars">17</span></p>
+
+</body>
+
+</html>

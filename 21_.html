@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Refrence By :</span><span class='details'>Meera Mam</span> <br>
+        <span class='name'>Roll No : </span><span class='details'>12208019</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <br>
+                <button type="submit" onclick="validateForm()">Submit</button>
+            </form>
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+
+        </div>
+
+        <!-- footerpart -->
+        <div class="footer">
+            <a href='20_.html'><span>&#9194;</span></a>
+            <a href='All_Javascipt.html'><span>&#127968;</span></a>
+            <a href='22_.html'><span>&#9193;</span></a>
+        </div>
+    </div>
+    <!-- Contain End -->
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let regex = /^[a-zA-Z]+$/;
+            let valid = true;
+
+            if (name == "") {
+                alert("Please enter your name");
+                valid = false;
+            }
+            if (regex.test(name)) {
+                alert("Input is valid");
+            } else {
+                alert("Input is invalid");
+            }
+
+        }
+
+        if (email == "") {
+            alert("Please enter your email");
+            valid = false;
+        } else if (!validateEmail(email)) {
+            alert("Please enter a valid email");
+            valid = false;
+        }
+
+        if (password == "") {
+            alert("Please enter your password");
+            valid = false;
+        }
+
+        if (valid) {
+            alert("Form submitted successfully");
+        }
+
+        function validateEmail(email) {
+            let re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+    </script>
+
+</body>
+
+</html>

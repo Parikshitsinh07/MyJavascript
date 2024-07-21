@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        option {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#mySelect').append($('<option>', {
+                value: 'option4',
+                text: 'Option 4'
+            }));
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>Dropdown Example</h1>
+    <label for="mySelect">Select an option:</label>
+    <select id="mySelect">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+</body>
+
+</html>

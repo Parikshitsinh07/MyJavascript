@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            var element = $("#yourElementId");
+            var position = element.offset();
+            var left = position.left;
+            var top = position.top;
+            $("#result").text("Left: " + left + ", Top: " + top);
+        });
+
+
+    </script>
+    <style>
+        #yourElementId {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: lime;
+            border: 1px solid #000;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="yourElementId"></div>
+    <div id="result"></div>
+</body>
+
+</html>

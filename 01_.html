@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 1</title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+        /* Multiplication Table Start */
+        table {
+            border-collapse: collapse;
+            margin: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid white;
+        }
+
+        input {
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin-left: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3E8E41;
+        }
+
+        /* Multiplication Table End */
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Refrence By :</span><span class='details'>Meera Mam</span> <br>
+        <span class='name'>Roll No : </span><span class='details'>12208019</span>
+    </div>
+    <!-- Heading End  -->
+
+    <!-- Contain Start -->
+    <div class="container">
+        <div class="full_code">
+            <label for="number">Enter a number :</label>
+            <input type="text" id="number">
+            <button onclick="printTable()">Print Table</button>
+        </div>
+
+        <div id="result"></div>
+
+        <div class="footer">
+            <a href=''><span>&#9194;</span></a>
+            <a href='All_Javascipt.html'><span>&#127968;</span></a>
+            <a href='02_.html'><span>&#9193;</span></a>
+        </div>
+    </div>
+    <!-- Contain End -->
+
+
+    <script>
+        function printTable() {
+            var num = parseInt(document.getElementById("number").value);
+            // var num = parseInt(document.getElementById("number").value);
+
+            if (num === "" || isNaN(num)) {
+                alert("Please enter a valid number.");
+                return false;
+            }
+            var table = "<table>";
+            for (var i = 1; i <= 10; i++) {
+                table += "<tr><td>" + num + " x " + i + " = " + (num * i) + "</td></tr>";
+            }
+            table += "</table>";
+
+            document.getElementById("result").innerHTML = table;
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!-- <script>
+        function myFunction() {
+            var n = document.getElementById('fnum').value;
+            for (var i = 1; i <= 10; i++) {
+                document.write('<table border="1" cellspacing="0" width="100" cellpadding="10px">');
+                for (var i = 1; i <= 10; i++) {
+                    document.write("<tr><td>" + n + "</td>" + "<td>" + "x" + "</td>" + "<td>" + i +
+                        "</td>" + "<td>" + "=" + "</td>" + "<td>" + n * i + "</td></tr>");
+                }
+                document.write("</table>");
+            }
+        }
+    </script> -->

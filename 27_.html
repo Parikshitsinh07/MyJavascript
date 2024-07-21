@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        // jQuery code to make the text blink
+        $(document).ready(function () {
+            // set the initial state of the text to visible
+            $('#blink-text').css('visibility', 'visible');
+
+            // set the interval to toggle the visibility every 500 milliseconds
+            setInterval(function () {
+                $('#blink-text').css('visibility', function (i, visibility) {
+                    return (visibility === 'visible') ? 'hidden' : 'visible';
+                });
+            }, 500);
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- HTML code with text to blink -->
+    <p id="blink-text">This text will blink</p>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="template.css">
+    <style>
+        button {
+            padding: 4px;
+            font-weight: bold;
+            margin-right: 10px;
+            background: lime;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading Start  -->
+    <div class="header">
+        <h1>Welcome to our JavaScript Assignment</h1>
+        <span class='name'>Refrence By :</span><span class='details'>Meera Mam</span> <br>
+        <span class='name'>Roll No : </span><span class='details'>12208019</span>
+    </div>
+    <!-- Heading End  -->
+
+
+    <!-- Contain Start -->
+    <div class="container">
+
+        <!-- Codepart -->
+        <div class="full_code">
+            <button onclick="openWindow()">Open</button>
+            <button onclick="closeWindow()">Close</button>
+        </div>
+
+        <!-- Outputpart  -->
+        <div id="result">
+
+        </div>
+
+        <!-- footerpart -->
+        <div class="footer">
+            <a href='21_.html'><span>&#9194;</span></a>
+            <a href='All_Javascipt.html'><span>&#127968;</span></a>
+            <a href='23_.html'><span>&#9193;</span></a>
+        </div>
+    </div>
+    <!-- Contain End -->
+
+    <script>
+        var mywindow;
+
+        function openWindow(params) {
+            mywindow = window.open("https://www.google.com", "", "width=500px,height=200px,left=100px,top=100px");
+        }
+        function closeWindow(params) {
+            mywindow.close();
+        }
+    </script>
+
+</body>
+
+</html>

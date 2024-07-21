@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        dl {
+            margin-top: 20px;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            // hide all definition descriptions
+            $('dd').hide();
+
+            // add click event to definition terms
+            $('dt').click(function () {
+                // toggle visibility of corresponding definition description
+                $(this).next('dd').slideToggle();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>Definition List Example</h1>
+    <dl>
+        <dt>Term 1</dt>
+        <dd>Definition 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition 2</dd>
+        <dt>Term 3</dt>
+        <dd>Definition 3</dd>
+    </dl>
+</body>
+
+</html>
+
+</body>
+
+</html>

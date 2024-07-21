@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiplication Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        input {
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3E8E41;
+        }
+    </style>
+    <script>
+        function printTable() {
+            var num = parseInt(document.getElementById("number").value);
+            var table = "<table>";
+            for (var i = 1; i <= 10; i++) {
+                table += "<tr><td>" + num + " x " + i + " = " + (num * i) + "</td></tr>";
+            }
+            table += "</table>";
+            document.getElementById("result").innerHTML = table;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="number">Enter a number:</label>
+    <input type="text" id="number">
+    <button onclick="printTable()">Print Table</button>
+    <div id="result"></div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+
+    <style>
+        #submit-btn {
+            background-color: #4CAF50;
+            /* Green */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            // disable submit button on page load
+            $('#submit-btn').prop('disabled', true);
+
+            // enable submit button when both inputs are filled out
+            $('input').keyup(function () {
+                if ($('input[name="username"]').val() != '' && $('input[name="password"]').val() != '') {
+                    $('#submit-btn').prop('disabled', false);
+                }
+                else {
+                    $('#submit-btn').prop('disabled', true);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <form id="myForm" action="" method="POST">
+        <label for="txt">Enter Your Name</label>
+        <input type="text" name="name" id="txt" required>
+        <label for="email">Enter Your Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="message">Enter Any Message</label>
+        <textarea name="message" id="message" required></textarea>
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+
+
+
+</body>
+
+</html>
